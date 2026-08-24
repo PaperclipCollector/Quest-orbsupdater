@@ -1,12 +1,15 @@
 import { logger } from "@vendetta";
-import Settings from "./Settings";
+import { completeAllVideoQuests, completeAllGameQuests, completeAllQuests } from "./quest-orbs";
+
+const TAG = "[QuestOrbs Plugin]";
 
 export default {
     onLoad: () => {
-        logger.log("Hello world!");
+        logger.log(`${TAG} Plugin loaded successfully`);
     },
     onUnload: () => {
-        logger.log("Goodbye, world.");
+        logger.log(`${TAG} Plugin unloaded`);
     },
-    settings: Settings,
-}
+};
+
+export { completeAllVideoQuests, completeAllGameQuests, completeAllQuests };
